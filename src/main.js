@@ -1,8 +1,10 @@
 import Phaser from 'phaser';
-import PreloadScene from './scenes/PreloadScene';
-import MainMenu from './scenes/MainMenu';
-import GameScene from './scenes/GameScene';
-import GameOverScene from './scenes/GameOverScene';
+
+// Adjust imports to the new paths
+import PreloadScene from './scenes/Game/PreloadScene.js';
+import MainMenu from './scenes/MainMenu.js';
+import GameScene from './scenes/Game/GameScene.js';
+import GameOverScene from './scenes/GameOverScene.js';
 
 const config = {
     type: Phaser.AUTO,
@@ -15,10 +17,10 @@ const config = {
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
     scene: [
-        PreloadScene,    // Loads assets first
+        PreloadScene,   // Loads assets first
         MainMenu,       // Then shows menu
-        GameScene,       // Main gameplay
-        GameOverScene    // Game over screen
+        GameScene,      // Main gameplay
+        GameOverScene   // Game over screen
     ]
 };
 

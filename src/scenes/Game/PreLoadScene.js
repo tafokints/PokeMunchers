@@ -11,9 +11,9 @@ class PreLoadScene extends Phaser.Scene {
 
     create() {
         // Import Pokemon data dynamically to avoid potential parsing issues
-        import('../config/pokemon/base.js').then(({ pokemonBase }) => {
-            import('../config/pokemon/types.js').then(({ typeSystem }) => {
-                import('../config/pokemon/evolution.js').then(({ evolutionData }) => {
+        import('../../config/pokemon/base.js').then(({ pokemonBase }) => {
+            import('../../config/pokemon/types.js').then(({ typeSystem }) => {
+                import('../../config/pokemon/evolution.js').then(({ evolutionData }) => {
                     this.game.pokemon = {
                         base: pokemonBase,
                         types: typeSystem,
